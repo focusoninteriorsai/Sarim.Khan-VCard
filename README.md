@@ -10,6 +10,7 @@ Professional digital visiting card (vCard) for **Sarim Khan – Project Director
 | `logo.png` | FocusOn Interiors logo, used as the favicon, in the hero/footer brand, and embedded in the saved `.vcf`. |
 | `assets/sarim-khan.jpg` | Profile photo used on the card and embedded in the saved `.vcf`. |
 | `assets/vendor/qrcode.js` | Vendored `qrcode-generator` (MIT) used to render the contact QR code offline. |
+| `assets/clients/` | Client logos shown in the "Marquee Accounts" strip. Files are named by client slug (`.svg` or `.png`). |
 
 ## Features
 

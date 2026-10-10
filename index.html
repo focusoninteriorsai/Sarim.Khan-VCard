@@ -352,11 +352,10 @@
     .marquee-track { display: flex; gap: 14px; width: max-content; animation: scroll 38s linear infinite; }
     .marquee:hover .marquee-track { animation-play-state: paused; }
     .client {
-      display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; padding: 13px 20px; border-radius: 14px;
-      background: #fff; border: 1px solid var(--line); font-family: var(--display); font-weight: 600; color: var(--ink); font-size: .98rem;
-      box-shadow: var(--shadow-soft);
+      display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; min-width: 180px; height: 78px;
+      padding: 14px 20px; border-radius: 14px; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-soft);
     }
-    .client i { color: var(--orange); }
+    .client img { height: 44px; width: auto; max-width: 150px; object-fit: contain; display: block; }
     @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .marquee-rev .marquee-track { animation-direction: reverse; }
 
@@ -993,17 +992,27 @@
       }
 
       /* ---------- clients marquee ---------- */
+      /* real client logos, stored in assets/clients/ */
       const clients = [
-        "Infosys", "HCLTech", "Wipro", "Accenture", "Nokia", "Google", "KPMG", "Oracle", "BT Group",
-        "L&T Financial Services", "HSBC", "Max Life Insurance", "Sodexo", "Compass Group", "McDonald's",
-        "Burger King", "Zomato", "Flipkart", "Avaya", "Panasonic", "Voltas", "Bajaj Allianz",
-        "Krsnaa Diagnostics", "Tata 1mg", "Titan", "Emversity", "Luminous Power", "Ericsson"
+        { name: "Infosys", file: "infosys.svg" }, { name: "HCLTech", file: "hcltech.png" },
+        { name: "Wipro", file: "wipro.svg" }, { name: "Accenture", file: "accenture.svg" },
+        { name: "Nokia", file: "nokia.svg" }, { name: "Google", file: "google.svg" },
+        { name: "KPMG", file: "kpmg.png" }, { name: "Oracle", file: "oracle.png" },
+        { name: "BT Group", file: "bt.svg" }, { name: "HSBC", file: "hsbc.svg" },
+        { name: "Max Life Insurance", file: "max-life-insurance.png" }, { name: "Sodexo", file: "sodexo.png" },
+        { name: "Compass Group", file: "compass-group.png" }, { name: "McDonald's", file: "mcdonalds.svg" },
+        { name: "Burger King", file: "burgerking.svg" }, { name: "Zomato", file: "zomato.svg" },
+        { name: "Flipkart", file: "flipkart.png" }, { name: "Avaya", file: "avaya.png" },
+        { name: "Panasonic", file: "panasonic.svg" }, { name: "Voltas", file: "voltas.png" },
+        { name: "Bajaj Allianz", file: "bajaj-allianz.png" }, { name: "Krsnaa Diagnostics", file: "krsnaa-diagnostics.png" },
+        { name: "Tata 1mg", file: "tata-1mg.png" }, { name: "Titan", file: "titan.png" },
+        { name: "Luminous Power", file: "luminous.png" }, { name: "Ericsson", file: "ericsson.svg" }
       ];
       const half = Math.ceil(clients.length / 2);
       const renderTrack = (el, list) => {
         // duplicate so the CSS translateX(-50%) loop is seamless
-        const html = [...list, ...list].map(n =>
-          `<span class="client"><i class="fa-solid fa-building"></i>${n}</span>`).join("");
+        const html = [...list, ...list].map(c =>
+          `<span class="client"><img src="assets/clients/${c.file}" alt="${c.name}" title="${c.name}" loading="lazy" /></span>`).join("");
         el.innerHTML = html;
       };
       renderTrack($("#track1"), clients.slice(0, half));
