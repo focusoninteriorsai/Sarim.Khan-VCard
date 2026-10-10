@@ -7,6 +7,7 @@ Professional digital visiting card (vCard) for **Sarim Khan – Project Director
 | Path | Purpose |
 | --- | --- |
 | `index.html` | The complete digital visiting card (single page, no build step). |
+| `logo.png` | FocusOn Interiors logo, used as the favicon, in the hero/footer brand, and embedded in the saved `.vcf`. |
 | `assets/sarim-khan.jpg` | Profile photo used on the card and embedded in the saved `.vcf`. |
 | `assets/vendor/qrcode.js` | Vendored `qrcode-generator` (MIT) used to render the contact QR code offline. |
 
@@ -35,5 +36,7 @@ The page loads Font Awesome and Google Fonts from their CDNs, so an internet con
 All contact details live in `index.html`:
 - The `CONTACT` object and the `buildVCard()` function in the `<script>` block (used for `.vcf` and QR).
 - The visible text in the HTML sections.
+
+To change the logo, replace `logo.png` (square PNG, keep the file name).
 
 To change the photo, replace `assets/sarim-khan.jpg` (keep the same file name, or update the `src` and `CONTACT.photo`).

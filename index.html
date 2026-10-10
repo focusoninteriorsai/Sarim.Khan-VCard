@@ -6,7 +6,7 @@
   <title>Sarim Khan | Project Director – FocusOn Interiors</title>
   <meta name="description" content="Digital visiting card of Sarim Khan, Project Director at FocusOn Interiors – turnkey commercial interior fit-outs across India." />
   <meta name="author" content="Sarim Khan" />
-  <meta name="theme-color" content="#0f1115" />
+  <meta name="theme-color" content="#de4525" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="profile" />
@@ -14,7 +14,8 @@
   <meta property="og:description" content="Turnkey commercial fit-out delivery across India. Spaces Styled, Stories Told." />
   <meta property="og:image" content="assets/sarim-khan.jpg" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M18 46V18h14a10 10 0 0 1 0 20H26v8z' fill='%23ff6b1a'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,10 +28,10 @@
       --ink: #0f1115;
       --ink-2: #181b22;
       --ink-3: #242833;
-      --orange: #ff6b1a;
-      --orange-2: #ff9a4d;
-      --orange-soft: #fff1e8;
-      --paper: #f5f3ef;
+      --orange: #de4525;
+      --orange-2: #f07a52;
+      --orange-soft: #fbe9e2;
+      --paper: #fbf8f0;
       --card: #ffffff;
       --text: #15181f;
       --muted: #5d6573;
@@ -66,9 +67,9 @@
       position: absolute; border-radius: 50%; filter: blur(80px); opacity: .45;
       animation: drift 22s ease-in-out infinite alternate;
     }
-    .ambient span:nth-child(1) { width: 480px; height: 480px; background: #ffb27a; top: -140px; right: -120px; }
+    .ambient span:nth-child(1) { width: 480px; height: 480px; background: #f7b9a3; top: -140px; right: -120px; }
     .ambient span:nth-child(2) { width: 420px; height: 420px; background: #d9d4cc; bottom: -120px; left: -120px; animation-delay: -6s; }
-    .ambient span:nth-child(3) { width: 260px; height: 260px; background: #ff6b1a; opacity: .18; top: 40%; left: 45%; animation-delay: -12s; }
+    .ambient span:nth-child(3) { width: 260px; height: 260px; background: #de4525; opacity: .18; top: 40%; left: 45%; animation-delay: -12s; }
     @keyframes drift {
       from { transform: translate(0, 0) scale(1); }
       to   { transform: translate(60px, 40px) scale(1.12); }
@@ -83,24 +84,24 @@
 
     /* ============ HERO ============ */
     .hero {
-      position: relative; overflow: hidden; color: #fff;
+      position: relative; overflow: hidden; color: var(--text);
       background:
-        radial-gradient(900px 500px at 88% -10%, rgba(255, 107, 26, .38), transparent 60%),
-        radial-gradient(700px 420px at -5% 110%, rgba(255, 107, 26, .18), transparent 60%),
-        linear-gradient(135deg, #0b0d11 0%, var(--ink-2) 55%, #1d2129 100%);
+        radial-gradient(900px 500px at 88% -10%, rgba(222,69,37,.16), transparent 60%),
+        radial-gradient(700px 420px at -5% 110%, rgba(222,69,37,.10), transparent 60%),
+        linear-gradient(135deg, #fffdf8 0%, var(--paper) 55%, #f6ece0 100%);
       padding: 56px 20px 150px;
     }
     .hero::before { /* blueprint grid */
       content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
       background-image:
-        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+        linear-gradient(rgba(15,17,21,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,17,21,.06) 1px, transparent 1px);
       background-size: 44px 44px;
       mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
     }
     .hero::after { /* sweeping light */
       content: ""; position: absolute; top: -50%; left: -60%; width: 40%; height: 200%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.07), transparent);
+      background: linear-gradient(90deg, transparent, rgba(222,69,37,.07), transparent);
       transform: rotate(18deg); animation: sweep 7s ease-in-out infinite;
     }
     @keyframes sweep { 0%, 100% { left: -60%; } 50% { left: 120%; } }
@@ -114,7 +115,7 @@
     .portrait-wrap { position: relative; justify-self: center; width: 100%; max-width: 360px; perspective: 900px; }
     .portrait-ring {
       position: relative; padding: 3px; border-radius: 32px;
-      background: linear-gradient(140deg, var(--orange), #ffd2b0 45%, var(--orange) 90%);
+      background: linear-gradient(140deg, var(--orange), #f6c2ae 45%, var(--orange) 90%);
       box-shadow: var(--shadow-lift);
       transition: transform .35s ease;
       will-change: transform;
@@ -163,39 +164,43 @@
 
     /* hero copy */
     .hero-copy { min-width: 0; }
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .brand img { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; box-shadow: var(--shadow-soft); background: var(--paper); flex-shrink: 0; }
+    .brand strong { display: block; font-family: var(--display); font-weight: 800; font-size: 1.1rem; color: var(--ink); line-height: 1.1; }
+    .brand small { display: block; font-size: .64rem; letter-spacing: .32em; text-transform: uppercase; color: var(--orange); font-weight: 600; margin-top: 4px; }
     .kicker {
       display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 600;
-      letter-spacing: .18em; text-transform: uppercase; color: var(--orange-2);
-      padding: 8px 14px; border: 1px solid rgba(255,107,26,.4); border-radius: 999px;
-      background: rgba(255,107,26,.08);
+      letter-spacing: .18em; text-transform: uppercase; color: var(--orange);
+      padding: 8px 14px; border: 1px solid rgba(222,69,37,.4); border-radius: 999px;
+      background: rgba(222,69,37,.08);
     }
-    .kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 0 rgba(255,107,26,.7); animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,107,26,.7);} 70% { box-shadow: 0 0 0 12px rgba(255,107,26,0);} 100% { box-shadow: 0 0 0 0 rgba(255,107,26,0);} }
+    .kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 0 rgba(222,69,37,.7); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(222,69,37,.7);} 70% { box-shadow: 0 0 0 12px rgba(222,69,37,0);} 100% { box-shadow: 0 0 0 0 rgba(222,69,37,0);} }
 
     .hero h1 {
       font-family: var(--display); font-weight: 800; letter-spacing: -.02em; line-height: 1.02;
       font-size: clamp(2.6rem, 6vw, 4.6rem); margin: 18px 0 8px;
     }
     .hero h1 .grad {
-      background: linear-gradient(90deg, #fff 0%, #ffd7bd 40%, var(--orange) 100%);
+      background: linear-gradient(90deg, var(--ink) 0%, #7a2a18 45%, var(--orange) 100%);
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
     .role {
       font-family: var(--display); font-size: clamp(1rem, 2.2vw, 1.25rem); font-weight: 600;
-      letter-spacing: .14em; text-transform: uppercase; color: #fff; margin: 0 0 6px;
+      letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin: 0 0 6px;
     }
-    .company { color: #c9ccd3; font-size: 1rem; margin: 0 0 14px; }
-    .company strong { color: #fff; font-weight: 600; }
+    .company { color: var(--muted); font-size: 1rem; margin: 0 0 14px; }
+    .company strong { color: var(--ink); font-weight: 600; }
     .tagline {
-      font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--orange-2);
+      font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--orange);
       margin: 0 0 18px;
     }
-    .lead { color: #c9ccd3; max-width: 60ch; margin: 0 0 24px; font-size: 1rem; }
+    .lead { color: var(--muted); max-width: 60ch; margin: 0 0 24px; font-size: 1rem; }
 
     .meta-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
     .chip {
       display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); color: #e9ebef;
+      background: #fff; border: 1px solid var(--line); color: var(--text);
       font-size: .86rem; backdrop-filter: blur(6px);
     }
     .chip i { color: var(--orange-2); }
@@ -215,10 +220,12 @@
     .btn:hover::after { opacity: 1; transform: translateX(100%); }
     .btn:hover { transform: translateY(-3px); }
     .btn i { font-size: 1rem; }
-    .btn-primary { background: linear-gradient(135deg, var(--orange), #ff8a3d); color: #fff; box-shadow: 0 14px 30px -10px rgba(255,107,26,.7); }
+    .btn-primary { background: linear-gradient(135deg, var(--orange), #e8673f); color: #fff; box-shadow: 0 14px 30px -10px rgba(222,69,37,.7); }
     .btn-whatsapp { background: #25d366; color: #fff; box-shadow: 0 14px 30px -12px rgba(37,211,102,.7); }
-    .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); backdrop-filter: blur(6px); }
-    .btn-ghost:hover { background: rgba(255,255,255,.14); }
+    .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); box-shadow: var(--shadow-soft); }
+    .btn-ghost:hover { background: var(--orange-soft); border-color: #f3c7a7; }
+    .cta .btn-ghost { background: rgba(255,255,255,.12); color: #fff; border-color: rgba(255,255,255,.4); }
+    .cta .btn-ghost:hover { background: rgba(255,255,255,.22); }
     .btn-light { background: #fff; color: var(--ink); }
 
     /* ============ STATS (overlap hero) ============ */
@@ -265,7 +272,7 @@
     /* cursor spotlight */
     .spot::before {
       content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
-      background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255,107,26,.13), transparent 60%);
+      background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(222,69,37,.13), transparent 60%);
     }
     .spot:hover::before { opacity: 1; }
     .spot > * { position: relative; }
@@ -297,7 +304,7 @@
       font-family: var(--display); font-weight: 800; font-size: 1.7rem; color: #fff; margin-bottom: 16px;
       background: linear-gradient(135deg, var(--ink), var(--ink-3)); box-shadow: 0 10px 20px -8px rgba(15,17,21,.6);
     }
-    .cqet .card:nth-child(2) .letter, .cqet .card:nth-child(4) .letter { background: linear-gradient(135deg, var(--orange), #ff8a3d); box-shadow: 0 10px 20px -8px rgba(255,107,26,.7); }
+    .cqet .card:nth-child(2) .letter, .cqet .card:nth-child(4) .letter { background: linear-gradient(135deg, var(--orange), #e8673f); box-shadow: 0 10px 20px -8px rgba(222,69,37,.7); }
     .cqet h3 { font-family: var(--display); font-size: 1.2rem; margin: 0 0 8px; }
     .cqet p { margin: 0; color: var(--muted); font-size: .95rem; }
 
@@ -328,11 +335,11 @@
     }
     .proj-top::after {
       content: ""; position: absolute; width: 180px; height: 180px; right: -50px; top: -60px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,107,26,.55), transparent 70%);
+      background: radial-gradient(circle, rgba(222,69,37,.55), transparent 70%);
       transition: transform .6s ease;
     }
     .proj:hover .proj-top::after { transform: scale(1.4) translate(-10px, 10px); }
-    .sector-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 10px; border-radius: 8px; background: rgba(255,107,26,.2); color: var(--orange-2); }
+    .sector-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 10px; border-radius: 8px; background: rgba(222,69,37,.2); color: var(--orange-2); }
     .proj-top h3 { font-family: var(--display); font-size: 1.2rem; margin: 14px 0 4px; line-height: 1.25; position: relative; z-index: 1; }
     .proj-top .loc { font-size: .85rem; color: #c9ccd3; position: relative; z-index: 1; }
     .proj-body { padding: 18px 22px 22px; display: flex; gap: 12px; justify-content: space-between; flex: 1; }
@@ -366,7 +373,7 @@
       background: var(--ink); color: #fff;
     }
     .contact-tile .ico.wa { background: #25d366; }
-    .contact-tile .ico.or { background: linear-gradient(135deg, var(--orange), #ff8a3d); }
+    .contact-tile .ico.or { background: linear-gradient(135deg, var(--orange), #e8673f); }
     .contact-tile small { display: block; color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
     .contact-tile span.val { display: block; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .95rem; }
 
@@ -393,18 +400,18 @@
     /* CTA */
     .cta {
       position: relative; overflow: hidden; border-radius: 32px; padding: 48px 32px; color: #fff; text-align: center;
-      background: radial-gradient(600px 300px at 90% 0%, rgba(255,107,26,.45), transparent 60%), linear-gradient(135deg, #0f1115, #232833);
+      background: radial-gradient(600px 300px at 90% 0%, rgba(255,255,255,.22), transparent 60%), linear-gradient(135deg, #de4525, #b33417);
       box-shadow: var(--shadow-lift);
     }
     .cta h2 { font-family: var(--display); font-size: clamp(1.6rem, 3.6vw, 2.3rem); margin: 0 0 10px; font-weight: 800; letter-spacing: -.02em; }
-    .cta p { color: #c9ccd3; margin: 0 auto 24px; max-width: 56ch; }
+    .cta p { color: rgba(255,255,255,.9); margin: 0 auto 24px; max-width: 56ch; }
     .cta .actions { justify-content: center; }
 
     /* footer */
-    footer { background: var(--ink); color: #aeb4bf; padding: 40px 20px 110px; text-align: center; }
-    .wordmark { font-family: var(--display); font-weight: 800; color: #fff; font-size: 1.5rem; letter-spacing: -.01em; display: inline-flex; align-items: center; gap: 10px; }
-    .wordmark .mark { width: 36px; height: 36px; border-radius: 10px; background: var(--orange); display: grid; place-items: center; color: #fff; font-size: 1rem; }
-    .wordmark small { display: block; font-family: var(--body); font-size: .62rem; letter-spacing: .42em; color: #fff; font-weight: 500; line-height: 1; margin-top: 2px; }
+    footer { background: #f3ece1; color: var(--muted); padding: 40px 20px 110px; text-align: center; }
+    .wordmark { font-family: var(--display); font-weight: 800; color: var(--ink); font-size: 1.5rem; letter-spacing: -.01em; display: inline-flex; align-items: center; gap: 10px; }
+    .wordmark .mark { width: 44px; height: 44px; border-radius: 12px; object-fit: cover; box-shadow: var(--shadow-soft); background: var(--paper); }
+    .wordmark small { display: block; font-family: var(--body); font-size: .62rem; letter-spacing: .42em; color: var(--ink); font-weight: 500; line-height: 1; margin-top: 2px; }
     footer p { margin: 14px auto 0; max-width: 60ch; font-size: .9rem; }
     footer .foot-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin: 18px 0 0; font-size: .9rem; }
     footer .foot-links a:hover { color: var(--orange-2); }
@@ -413,7 +420,7 @@
     .dock {
       position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 50;
       display: flex; gap: 6px; padding: 8px; border-radius: 22px;
-      background: rgba(15,17,21,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      background: rgba(26,23,20,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(255,255,255,.12); box-shadow: 0 20px 40px -12px rgba(0,0,0,.5);
       animation: dockIn .8s cubic-bezier(.2,.8,.2,1) both .4s;
     }
@@ -446,6 +453,7 @@
       .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
       .portrait-wrap { max-width: 300px; }
       .hero .kicker { margin: 0 auto; }
+      .brand { justify-content: center; }
       .lead { margin-left: auto; margin-right: auto; }
       .meta-chips, .actions { justify-content: center; }
       .float-badge.top { right: -8px; top: 12px; }
@@ -519,6 +527,10 @@
 
       <!-- copy -->
       <div class="hero-copy">
+        <div class="brand">
+          <img src="logo.png" alt="FocusOn Interiors logo" width="56" height="56" />
+          <div><strong>FocusOn Interiors</strong><small>Spaces Styled, Stories Told</small></div>
+        </div>
         <span class="kicker"><span class="dot"></span> Digital Visiting Card</span>
 
         <h1><span class="grad">Sarim Khan</span></h1>
@@ -537,8 +549,8 @@
         </div>
 
         <div class="actions">
-          <a class="btn btn-primary" href="tel:+919005554240"><i class="fa-solid fa-phone"></i> Call Now</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/919005554240" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-primary" href="tel:+919005564240"><i class="fa-solid fa-phone"></i> Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/919005564240" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           <a class="btn btn-ghost" href="mailto:sarim.sam786@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
           <button class="btn btn-ghost" type="button" data-action="save"><i class="fa-solid fa-address-book"></i> Save Contact</button>
           <button class="btn btn-ghost" type="button" data-action="share"><i class="fa-solid fa-share-nodes"></i> Share</button>
@@ -790,11 +802,11 @@
       </div>
 
       <div class="contact-grid">
-        <a class="contact-tile reveal" href="tel:+919005554240">
+        <a class="contact-tile reveal" href="tel:+919005564240">
           <span class="ico"><i class="fa-solid fa-phone"></i></span>
-          <div style="min-width:0"><small>Mobile</small><span class="val">+91 90055 54240</span></div>
+          <div style="min-width:0"><small>Mobile</small><span class="val">+91 90055 64240</span></div>
         </a>
-        <a class="contact-tile reveal" style="--d:.06s" href="https://wa.me/919005554240" target="_blank" rel="noopener">
+        <a class="contact-tile reveal" style="--d:.06s" href="https://wa.me/919005564240" target="_blank" rel="noopener">
           <span class="ico wa"><i class="fa-brands fa-whatsapp"></i></span>
           <div style="min-width:0"><small>WhatsApp</small><span class="val">Chat on WhatsApp</span></div>
         </a>
@@ -862,8 +874,8 @@
         <h2>Ready to style your next space?</h2>
         <p>Share your brief — from a single floor to a multi-city rollout. One point of contact, one workflow, one delivered vision.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="tel:+919005554240"><i class="fa-solid fa-phone"></i> Call Sarim</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/919005554240" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-primary" href="tel:+919005564240"><i class="fa-solid fa-phone"></i> Call Sarim</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/919005564240" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           <a class="btn btn-ghost" href="https://focusoninteriors.com/contact/" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane"></i> Start a Project</a>
         </div>
       </div>
@@ -873,7 +885,7 @@
   <!-- ================= FOOTER ================= -->
   <footer>
     <div class="wordmark">
-      <span class="mark"><i class="fa-solid fa-couch"></i></span>
+      <img class="mark" src="logo.png" alt="FocusOn Interiors logo" width="44" height="44" />
       <span>FocusOn <span style="color:var(--orange-2)">Interiors</span><small>INTERIORS</small></span>
     </div>
     <p>FocusOn Interior Decorators Pvt. Ltd. · Turnkey interior fit-outs across India.</p>
@@ -884,13 +896,13 @@
       <a href="https://focusoninteriors.com/career/" target="_blank" rel="noopener">Careers</a>
       <a href="https://focusoninteriors.com/contact/" target="_blank" rel="noopener">Contact</a>
     </nav>
-    <p style="margin-top:22px;font-size:.8rem;opacity:.75">© 2026 FocusOn Interiors · Spaces Styled, Stories Told · <a href="#top" style="color:#fff">Back to top ↑</a></p>
+    <p style="margin-top:22px;font-size:.8rem;opacity:.75">© 2026 FocusOn Interiors · Spaces Styled, Stories Told · <a href="#top" style="color:var(--ink)">Back to top ↑</a></p>
   </footer>
 
   <!-- floating action dock -->
   <nav class="dock" aria-label="Quick actions">
-    <a href="tel:+919005554240" aria-label="Call Sarim Khan"><i class="fa-solid fa-phone"></i>Call</a>
-    <a class="wa" href="https://wa.me/919005554240" target="_blank" rel="noopener" aria-label="WhatsApp Sarim Khan"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+    <a href="tel:+919005564240" aria-label="Call Sarim Khan"><i class="fa-solid fa-phone"></i>Call</a>
+    <a class="wa" href="https://wa.me/919005564240" target="_blank" rel="noopener" aria-label="WhatsApp Sarim Khan"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
     <a href="mailto:sarim.sam786@gmail.com" aria-label="Email Sarim Khan"><i class="fa-solid fa-envelope"></i>Email</a>
     <button type="button" data-action="save" aria-label="Save contact"><i class="fa-solid fa-address-book"></i>Save</button>
     <button type="button" data-action="share" aria-label="Share visiting card"><i class="fa-solid fa-share-nodes"></i>Share</button>
@@ -907,12 +919,13 @@
         name: "Sarim Khan",
         title: "Project Director",
         org: "FocusOn Interiors",
-        mobile: "+919005554240",
+        mobile: "+919005564240",
         email: "sarim.sam786@gmail.com",
         linkedin: "https://www.linkedin.com/in/sarim-khan-485a90304/",
         portfolio: "https://sarim-khan-portfolio.vercel.app/",
         website: "https://focusoninteriors.com/",
-        photo: "assets/sarim-khan.jpg"
+        photo: "assets/sarim-khan.jpg",
+        logo: "logo.png"
       };
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1024,7 +1037,7 @@
         return out.join("\r\n");
       }
 
-      function buildVCard(photoB64) {
+      function buildVCard(photoB64, logoB64) {
         const lines = [
           "BEGIN:VCARD",
           "VERSION:3.0",
@@ -1033,7 +1046,7 @@
           "ORG:FocusOn Interiors;Project Department",
           "TITLE:Project Director",
           "ROLE:Project Director",
-          "TEL;TYPE=CELL,VOICE,PREF:+919005554240",
+          "TEL;TYPE=CELL,VOICE,PREF:+919005564240",
           "TEL;TYPE=WORK,VOICE:+911149287589",
           "TEL;TYPE=WORK,VOICE:+919910258820",
           "EMAIL;TYPE=INTERNET,PREF:sarim.sam786@gmail.com",
@@ -1045,13 +1058,14 @@
           "CATEGORIES:Interior Design,Project Management",
           "NOTE:" + esc("Project Director, FocusOn Interiors. Turnkey commercial interior fit-outs across India. Spaces Styled, Stories Told."),
         ];
+        if (logoB64) lines.push("LOGO;ENCODING=b;TYPE=PNG:" + logoB64);
         if (photoB64) lines.push("PHOTO;ENCODING=b;TYPE=JPEG:" + photoB64);
         lines.push("REV:" + new Date().toISOString(), "END:VCARD");
         return lines.map(fold).join("\r\n") + "\r\n";
       }
 
       // Photo is embedded in the downloadable .vcf so the photo shows up in phone contacts.
-      const photoPromise = fetch(CONTACT.photo)
+      const toBase64 = (url) => fetch(url)
         .then(r => (r.ok ? r.arrayBuffer() : null))
         .then(buf => {
           if (!buf) return null;
@@ -1061,10 +1075,12 @@
           return btoa(bin);
         })
         .catch(() => null);
+      const photoPromise = toBase64(CONTACT.photo);
+      const logoPromise = toBase64(CONTACT.logo);
 
       async function saveContact() {
-        const photo = await photoPromise;
-        const blob = new Blob([buildVCard(photo)], { type: "text/vcard;charset=utf-8" });
+        const [photo, logo] = await Promise.all([photoPromise, logoPromise]);
+        const blob = new Blob([buildVCard(photo, logo)], { type: "text/vcard;charset=utf-8" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
@@ -1112,7 +1128,7 @@
       const img = $(".portrait img");
       img.addEventListener("error", () => {
         img.alt = "";
-        img.parentElement.style.background = "linear-gradient(135deg,#ff6b1a,#0f1115)";
+        img.parentElement.style.background = "linear-gradient(135deg,#de4525,#0f1115)";
         img.style.display = "none";
       });
     })();
