@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Sarim Khan | Project Director – FocusOn Interiors</title>
+  <meta name="description" content="Digital visiting card of Sarim Khan, Project Director at FocusOn Interiors – turnkey commercial interior fit-outs across India." />
+  <meta name="author" content="Sarim Khan" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Sarim Khan – Project Director, FocusOn Interiors" />
+  <meta property="og:description" content="Turnkey commercial fit-out delivery across India. Spaces Styled, Stories Told." />
+  <meta property="og:image" content="assets/sarim-khan.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M18 46V18h14a10 10 0 0 1 0 20H26v8z' fill='%23ff6b1a'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    /* ============ DESIGN TOKENS (FocusOn brand: charcoal + white + signature orange) ============ */
+    :root {
+      --ink: #0f1115;
+      --ink-2: #181b22;
+      --ink-3: #242833;
+      --orange: #ff6b1a;
+      --orange-2: #ff9a4d;
+      --orange-soft: #fff1e8;
+      --paper: #f5f3ef;
+      --card: #ffffff;
+      --text: #15181f;
+      --muted: #5d6573;
+      --line: #e7e2da;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow-soft: 0 10px 30px -12px rgba(15, 17, 21, .18);
+      --shadow-lift: 0 30px 60px -20px rgba(15, 17, 21, .35);
+      --display: "Outfit", "Inter", system-ui, sans-serif;
+      --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--body);
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+    :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 8px; }
+
+    /* ============ AMBIENT BACKGROUND ============ */
+    .ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+    .ambient span {
+      position: absolute; border-radius: 50%; filter: blur(80px); opacity: .45;
+      animation: drift 22s ease-in-out infinite alternate;
+    }
+    .ambient span:nth-child(1) { width: 480px; height: 480px; background: #ffb27a; top: -140px; right: -120px; }
+    .ambient span:nth-child(2) { width: 420px; height: 420px; background: #d9d4cc; bottom: -120px; left: -120px; animation-delay: -6s; }
+    .ambient span:nth-child(3) { width: 260px; height: 260px; background: #ff6b1a; opacity: .18; top: 40%; left: 45%; animation-delay: -12s; }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(60px, 40px) scale(1.12); }
+    }
+
+    /* scroll progress */
+    .progress {
+      position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 100;
+      background: linear-gradient(90deg, var(--orange), var(--orange-2));
+      transform-origin: 0 50%; transform: scaleX(0);
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; overflow: hidden; color: #fff;
+      background:
+        radial-gradient(900px 500px at 88% -10%, rgba(255, 107, 26, .38), transparent 60%),
+        radial-gradient(700px 420px at -5% 110%, rgba(255, 107, 26, .18), transparent 60%),
+        linear-gradient(135deg, #0b0d11 0%, var(--ink-2) 55%, #1d2129 100%);
+      padding: 56px 20px 150px;
+    }
+    .hero::before { /* blueprint grid */
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    }
+    .hero::after { /* sweeping light */
+      content: ""; position: absolute; top: -50%; left: -60%; width: 40%; height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.07), transparent);
+      transform: rotate(18deg); animation: sweep 7s ease-in-out infinite;
+    }
+    @keyframes sweep { 0%, 100% { left: -60%; } 50% { left: 120%; } }
+
+    .hero-inner {
+      position: relative; z-index: 1; max-width: 1120px; margin: 0 auto;
+      display: grid; grid-template-columns: minmax(260px, 360px) 1fr; gap: 56px; align-items: center;
+    }
+
+    /* portrait */
+    .portrait-wrap { position: relative; justify-self: center; width: 100%; max-width: 360px; perspective: 900px; }
+    .portrait-ring {
+      position: relative; padding: 3px; border-radius: 32px;
+      background: linear-gradient(140deg, var(--orange), #ffd2b0 45%, var(--orange) 90%);
+      box-shadow: var(--shadow-lift);
+      transition: transform .35s ease;
+      will-change: transform;
+    }
+    .portrait {
+      position: relative; border-radius: 29px; overflow: hidden; background: #fff;
+      aspect-ratio: 4 / 5;
+    }
+    .portrait img {
+      width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%;
+      transform: scale(1.04); transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+    }
+    .reveal-in .portrait img { transform: scale(1); }
+    .portrait::after {
+      content: ""; position: absolute; inset: auto 0 0 0; height: 45%;
+      background: linear-gradient(to top, rgba(15,17,21,.75), transparent);
+      pointer-events: none;
+    }
+    .portrait-name-tag {
+      position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      color: #fff; font-size: .85rem;
+    }
+    .portrait-name-tag strong { display: block; font-family: var(--display); font-size: 1.05rem; font-weight: 600; }
+    .verified {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px;
+      background: rgba(255,255,255,.16); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,.25);
+      font-size: .75rem; font-weight: 600; white-space: nowrap;
+    }
+    .verified i { color: var(--orange-2); }
+
+    .float-badge {
+      position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,.96); color: var(--ink); padding: 10px 14px; border-radius: 16px;
+      box-shadow: var(--shadow-lift); font-size: .8rem; font-weight: 600;
+      animation: bob 5s ease-in-out infinite;
+    }
+    .float-badge b { font-family: var(--display); font-size: 1.15rem; color: var(--orange); display: block; line-height: 1; }
+    .float-badge.top { top: 22px; right: -22px; }
+    .float-badge.bottom { bottom: 92px; left: -26px; animation-delay: -2.5s; }
+    .float-badge .ico {
+      width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+      background: var(--orange-soft); color: var(--orange);
+    }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+    /* hero copy */
+    .hero-copy { min-width: 0; }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase; color: var(--orange-2);
+      padding: 8px 14px; border: 1px solid rgba(255,107,26,.4); border-radius: 999px;
+      background: rgba(255,107,26,.08);
+    }
+    .kicker .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 0 rgba(255,107,26,.7); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,107,26,.7);} 70% { box-shadow: 0 0 0 12px rgba(255,107,26,0);} 100% { box-shadow: 0 0 0 0 rgba(255,107,26,0);} }
+
+    .hero h1 {
+      font-family: var(--display); font-weight: 800; letter-spacing: -.02em; line-height: 1.02;
+      font-size: clamp(2.6rem, 6vw, 4.6rem); margin: 18px 0 8px;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(90deg, #fff 0%, #ffd7bd 40%, var(--orange) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .role {
+      font-family: var(--display); font-size: clamp(1rem, 2.2vw, 1.25rem); font-weight: 600;
+      letter-spacing: .14em; text-transform: uppercase; color: #fff; margin: 0 0 6px;
+    }
+    .company { color: #c9ccd3; font-size: 1rem; margin: 0 0 14px; }
+    .company strong { color: #fff; font-weight: 600; }
+    .tagline {
+      font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--orange-2);
+      margin: 0 0 18px;
+    }
+    .lead { color: #c9ccd3; max-width: 60ch; margin: 0 0 24px; font-size: 1rem; }
+
+    .meta-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); color: #e9ebef;
+      font-size: .86rem; backdrop-filter: blur(6px);
+    }
+    .chip i { color: var(--orange-2); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 13px 20px; border-radius: 14px; border: 1px solid transparent; font-weight: 600; font-size: .95rem;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+      overflow: hidden; white-space: nowrap; isolation: isolate;
+    }
+    .btn::after {
+      content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.35), transparent 80%);
+      transform: translateX(-100%); transition: transform .6s ease, opacity .3s;
+    }
+    .btn:hover::after { opacity: 1; transform: translateX(100%); }
+    .btn:hover { transform: translateY(-3px); }
+    .btn i { font-size: 1rem; }
+    .btn-primary { background: linear-gradient(135deg, var(--orange), #ff8a3d); color: #fff; box-shadow: 0 14px 30px -10px rgba(255,107,26,.7); }
+    .btn-whatsapp { background: #25d366; color: #fff; box-shadow: 0 14px 30px -12px rgba(37,211,102,.7); }
+    .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); backdrop-filter: blur(6px); }
+    .btn-ghost:hover { background: rgba(255,255,255,.14); }
+    .btn-light { background: #fff; color: var(--ink); }
+
+    /* ============ STATS (overlap hero) ============ */
+    .stats {
+      position: relative; z-index: 2; max-width: 1120px; margin: -96px auto 0; padding: 0 20px;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    }
+    .stat {
+      background: var(--card); border-radius: var(--radius-lg); padding: 22px 20px; box-shadow: var(--shadow-lift);
+      position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.6);
+    }
+    .stat::after {
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+      background: linear-gradient(var(--orange), var(--orange-2));
+    }
+    .stat .num {
+      font-family: var(--display); font-weight: 800; font-size: clamp(1.5rem, 3.2vw, 2.1rem); line-height: 1.1;
+      color: var(--ink); letter-spacing: -.01em; display: flex; align-items: baseline; gap: 2px; flex-wrap: wrap;
+    }
+    .stat .num .pre, .stat .num .suf { color: var(--orange); font-size: .75em; }
+    .stat .label { color: var(--muted); font-size: .85rem; margin-top: 4px; }
+
+    /* ============ SECTIONS ============ */
+    main { max-width: 1120px; margin: 0 auto; padding: 56px 20px 24px; }
+    section { margin-bottom: 64px; }
+    .eyebrow {
+      font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--orange);
+      display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px;
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--orange); border-radius: 2px; }
+    h2.title {
+      font-family: var(--display); font-weight: 800; font-size: clamp(1.7rem, 3.6vw, 2.5rem);
+      letter-spacing: -.02em; line-height: 1.15; margin: 0 0 14px; color: var(--ink);
+    }
+    .section-head { margin-bottom: 28px; max-width: 62ch; }
+    .section-head p { color: var(--muted); margin: 0; }
+
+    .card {
+      position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-xl);
+      padding: 28px; box-shadow: var(--shadow-soft); overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: #f3c7a7; }
+    /* cursor spotlight */
+    .spot::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
+      background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255,107,26,.13), transparent 60%);
+    }
+    .spot:hover::before { opacity: 1; }
+    .spot > * { position: relative; }
+
+    .grid-2 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    .about p { color: #3b4250; font-size: 1.02rem; margin: 0 0 16px; }
+    .about p strong { color: var(--ink); }
+    .sub-h { font-family: var(--display); font-size: 1.05rem; font-weight: 700; margin: 26px 0 12px; color: var(--ink); }
+    .tools { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tool {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 12px;
+      background: var(--ink); color: #fff; font-weight: 600; font-size: .9rem;
+    }
+    .tool i { color: var(--orange-2); }
+
+    .edu-year { font-family: var(--display); color: var(--orange); font-weight: 700; font-size: .95rem; }
+    .edu h3 { font-family: var(--display); font-size: 1.15rem; margin: 6px 0 8px; color: var(--ink); line-height: 1.3; }
+    .edu p { color: var(--muted); margin: 0; font-size: .95rem; }
+    .edu .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .pill { font-size: .78rem; font-weight: 600; padding: 6px 10px; border-radius: 999px; background: var(--orange-soft); color: #b84a0c; }
+
+    /* C.Q.E.T. */
+    .cqet .card { text-align: left; }
+    .cqet .letter {
+      width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center;
+      font-family: var(--display); font-weight: 800; font-size: 1.7rem; color: #fff; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--ink), var(--ink-3)); box-shadow: 0 10px 20px -8px rgba(15,17,21,.6);
+    }
+    .cqet .card:nth-child(2) .letter, .cqet .card:nth-child(4) .letter { background: linear-gradient(135deg, var(--orange), #ff8a3d); box-shadow: 0 10px 20px -8px rgba(255,107,26,.7); }
+    .cqet h3 { font-family: var(--display); font-size: 1.2rem; margin: 0 0 8px; }
+    .cqet p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    /* services */
+    .svc .card { padding: 24px; }
+    .svc-ico {
+      width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 1.25rem;
+      background: var(--orange-soft); color: var(--orange); margin-bottom: 16px; transition: transform .3s, background .3s, color .3s;
+    }
+    .svc .card:hover .svc-ico { transform: rotate(-8deg) scale(1.08); background: var(--orange); color: #fff; }
+    .svc h3 { font-family: var(--display); font-size: 1.12rem; margin: 0 0 8px; }
+    .svc p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .svc .idx { position: absolute; top: 18px; right: 22px; font-family: var(--display); font-weight: 800; font-size: 2.2rem; color: #f1ece6; }
+
+    .sectors { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .sector {
+      padding: 9px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: .9rem; font-weight: 500;
+      transition: all .25s ease;
+    }
+    .sector:hover { background: var(--ink); color: #fff; border-color: var(--ink); transform: translateY(-2px); }
+
+    /* projects */
+    .proj .card { padding: 0; display: flex; flex-direction: column; }
+    .proj-top {
+      position: relative; padding: 22px 22px 20px; color: #fff; min-height: 150px;
+      background: linear-gradient(135deg, var(--ink) 0%, var(--ink-3) 70%, #3a2a20 100%);
+      overflow: hidden;
+    }
+    .proj-top::after {
+      content: ""; position: absolute; width: 180px; height: 180px; right: -50px; top: -60px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,107,26,.55), transparent 70%);
+      transition: transform .6s ease;
+    }
+    .proj:hover .proj-top::after { transform: scale(1.4) translate(-10px, 10px); }
+    .sector-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 10px; border-radius: 8px; background: rgba(255,107,26,.2); color: var(--orange-2); }
+    .proj-top h3 { font-family: var(--display); font-size: 1.2rem; margin: 14px 0 4px; line-height: 1.25; position: relative; z-index: 1; }
+    .proj-top .loc { font-size: .85rem; color: #c9ccd3; position: relative; z-index: 1; }
+    .proj-body { padding: 18px 22px 22px; display: flex; gap: 12px; justify-content: space-between; flex: 1; }
+    .proj-body .k { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .proj-body .v { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--ink); }
+    .proj-body .v.or { color: var(--orange); }
+
+    /* clients marquee */
+    .marquee { position: relative; overflow: hidden; padding: 6px 0; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .marquee-track { display: flex; gap: 14px; width: max-content; animation: scroll 38s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .client {
+      display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; padding: 13px 20px; border-radius: 14px;
+      background: #fff; border: 1px solid var(--line); font-family: var(--display); font-weight: 600; color: var(--ink); font-size: .98rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .client i { color: var(--orange); }
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-rev .marquee-track { animation-direction: reverse; }
+
+    /* contact */
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .contact-tile {
+      display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: var(--radius-lg);
+      background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-soft); min-width: 0;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .contact-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); border-color: var(--orange); }
+    .contact-tile .ico {
+      flex: 0 0 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 1.1rem;
+      background: var(--ink); color: #fff;
+    }
+    .contact-tile .ico.wa { background: #25d366; }
+    .contact-tile .ico.or { background: linear-gradient(135deg, var(--orange), #ff8a3d); }
+    .contact-tile small { display: block; color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+    .contact-tile span.val { display: block; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .95rem; }
+
+    .offices { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .office { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: var(--orange-soft); color: #7a3208; font-weight: 600; font-size: .9rem; }
+    .office i { color: var(--orange); }
+
+    .qr-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+    .qr-box {
+      width: 200px; height: 200px; padding: 14px; border-radius: 20px; background: #fff; border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft); display: grid; place-items: center;
+    }
+    .qr-box svg { width: 100%; height: 100%; }
+    .qr-box svg path { fill: var(--ink); }
+    .qr-card h3 { font-family: var(--display); margin: 0; font-size: 1.2rem; }
+    .qr-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+    .address-card { display: flex; gap: 14px; align-items: flex-start; }
+    .address-card .ico { flex: 0 0 48px; height: 48px; border-radius: 14px; background: var(--orange-soft); color: var(--orange); display: grid; place-items: center; font-size: 1.1rem; }
+    .address-card h3 { font-family: var(--display); margin: 0 0 6px; font-size: 1.1rem; }
+    .address-card p { margin: 0; color: var(--muted); }
+    .address-card a { color: var(--orange); font-weight: 600; }
+
+    /* CTA */
+    .cta {
+      position: relative; overflow: hidden; border-radius: 32px; padding: 48px 32px; color: #fff; text-align: center;
+      background: radial-gradient(600px 300px at 90% 0%, rgba(255,107,26,.45), transparent 60%), linear-gradient(135deg, #0f1115, #232833);
+      box-shadow: var(--shadow-lift);
+    }
+    .cta h2 { font-family: var(--display); font-size: clamp(1.6rem, 3.6vw, 2.3rem); margin: 0 0 10px; font-weight: 800; letter-spacing: -.02em; }
+    .cta p { color: #c9ccd3; margin: 0 auto 24px; max-width: 56ch; }
+    .cta .actions { justify-content: center; }
+
+    /* footer */
+    footer { background: var(--ink); color: #aeb4bf; padding: 40px 20px 110px; text-align: center; }
+    .wordmark { font-family: var(--display); font-weight: 800; color: #fff; font-size: 1.5rem; letter-spacing: -.01em; display: inline-flex; align-items: center; gap: 10px; }
+    .wordmark .mark { width: 36px; height: 36px; border-radius: 10px; background: var(--orange); display: grid; place-items: center; color: #fff; font-size: 1rem; }
+    .wordmark small { display: block; font-family: var(--body); font-size: .62rem; letter-spacing: .42em; color: #fff; font-weight: 500; line-height: 1; margin-top: 2px; }
+    footer p { margin: 14px auto 0; max-width: 60ch; font-size: .9rem; }
+    footer .foot-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin: 18px 0 0; font-size: .9rem; }
+    footer .foot-links a:hover { color: var(--orange-2); }
+
+    /* floating dock */
+    .dock {
+      position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 50;
+      display: flex; gap: 6px; padding: 8px; border-radius: 22px;
+      background: rgba(15,17,21,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,.12); box-shadow: 0 20px 40px -12px rgba(0,0,0,.5);
+      animation: dockIn .8s cubic-bezier(.2,.8,.2,1) both .4s;
+    }
+    @keyframes dockIn { from { opacity: 0; transform: translate(-50%, 30px); } to { opacity: 1; transform: translate(-50%, 0); } }
+    .dock a, .dock button {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+      min-width: 66px; padding: 9px 10px; border-radius: 16px; border: 0; background: transparent; color: #e9ebef; font-size: .7rem; font-weight: 600;
+      transition: background .2s, transform .2s;
+    }
+    .dock a:hover, .dock button:hover { background: rgba(255,255,255,.1); transform: translateY(-2px); }
+    .dock i { font-size: 1.1rem; color: var(--orange-2); }
+    .dock .wa i { color: #25d366; }
+
+    /* toast */
+    .toast {
+      position: fixed; left: 50%; top: 18px; transform: translate(-50%, -140%); z-index: 200;
+      background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 14px; font-size: .92rem; font-weight: 500;
+      box-shadow: var(--shadow-lift); transition: transform .45s cubic-bezier(.2,.8,.2,1); max-width: calc(100% - 32px);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .toast i { color: #25d366; }
+    .toast.show { transform: translate(-50%, 0); }
+
+    /* reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .portrait-wrap { max-width: 300px; }
+      .hero .kicker { margin: 0 auto; }
+      .lead { margin-left: auto; margin-right: auto; }
+      .meta-chips, .actions { justify-content: center; }
+      .float-badge.top { right: -8px; top: 12px; }
+      .float-badge.bottom { left: -8px; bottom: 80px; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 40px 16px 130px; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: -84px; padding: 0 14px; }
+      .stat { padding: 18px 16px; }
+      main { padding: 44px 16px 16px; }
+      section { margin-bottom: 52px; }
+      .grid-3, .grid-4, .contact-grid { grid-template-columns: 1fr; }
+      .card { padding: 22px; }
+      .cta { padding: 36px 20px; }
+      .btn { flex: 1 1 calc(50% - 12px); padding: 12px 14px; font-size: .9rem; }
+      .actions .btn-wide { flex-basis: 100%; }
+      .float-badge { font-size: .72rem; padding: 8px 10px; }
+      .float-badge b { font-size: 1rem; }
+      .dock { gap: 2px; padding: 6px; }
+      .dock a, .dock button { min-width: 58px; padding: 8px 6px; font-size: .64rem; }
+    }
+    @media (max-width: 380px) {
+      .btn { flex-basis: 100%; }
+      .float-badge.bottom { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ambient background -->
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <!-- portrait -->
+      <div class="portrait-wrap">
+        <div class="float-badge top" aria-hidden="true">
+          <span class="ico"><i class="fa-solid fa-chart-line"></i></span>
+          <div><b>₹120+ Cr</b>Project value directed</div>
+        </div>
+
+        <div class="portrait-ring" data-tilt id="tilt">
+          <div class="portrait">
+            <img src="assets/sarim-khan.jpg" alt="Sarim Khan, Project Director at FocusOn Interiors" width="371" height="700" fetchpriority="high" />
+            <div class="portrait-name-tag">
+              <div>
+                <strong>Sarim Khan</strong>
+                Project Director
+              </div>
+              <span class="verified"><i class="fa-solid fa-circle-check"></i> Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-badge bottom" aria-hidden="true">
+          <span class="ico"><i class="fa-solid fa-building"></i></span>
+          <div><b>4,50,000+</b>Sq. Ft. delivered</div>
+        </div>
+      </div>
+
+      <!-- copy -->
+      <div class="hero-copy">
+        <span class="kicker"><span class="dot"></span> Digital Visiting Card</span>
+
+        <h1><span class="grad">Sarim Khan</span></h1>
+        <p class="role">Project Director</p>
+        <p class="company"><strong>FocusOn Interiors</strong> · FocusOn Interior Decorators Pvt. Ltd.</p>
+        <p class="tagline">“Spaces Styled, Stories Told.”</p>
+        <p class="lead">
+          Directing turnkey commercial interior fit-outs — from BOQ to handover — for corporate, BFSI, healthcare,
+          education and F&amp;B clients across India. Engineer by training, delivery leader by record.
+        </p>
+
+        <div class="meta-chips">
+          <span class="chip"><i class="fa-solid fa-location-dot"></i> Delhi-NCR · PAN-India</span>
+          <span class="chip"><i class="fa-solid fa-calendar-check"></i> Since Sep 2018</span>
+          <span class="chip"><i class="fa-solid fa-award"></i> C.Q.E.T. Standard</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+919005554240"><i class="fa-solid fa-phone"></i> Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/919005554240" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-ghost" href="mailto:sarim.sam786@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+          <button class="btn btn-ghost" type="button" data-action="save"><i class="fa-solid fa-address-book"></i> Save Contact</button>
+          <button class="btn btn-ghost" type="button" data-action="share"><i class="fa-solid fa-share-nodes"></i> Share</button>
+          <a class="btn btn-ghost" href="https://sarim-khan-portfolio.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= STATS ================= -->
+  <div class="stats" aria-label="Key achievements">
+    <div class="stat spot reveal" style="--d:.05s">
+      <div class="num"><span class="pre">₹</span><span class="count" data-target="120">120</span><span class="suf">+ Cr</span></div>
+      <div class="label">Project value directed</div>
+    </div>
+    <div class="stat spot reveal" style="--d:.12s">
+      <div class="num"><span class="count" data-target="450000" data-locale="en-IN">450,000</span><span class="suf">+</span></div>
+      <div class="label">Sq. ft. of fit-out delivered</div>
+    </div>
+    <div class="stat spot reveal" style="--d:.19s">
+      <div class="num"><span class="count" data-target="8">8</span><span class="suf">+ yrs</span></div>
+      <div class="label">Leading project delivery</div>
+    </div>
+    <div class="stat spot reveal" style="--d:.26s">
+      <div class="num"><span class="count" data-target="5">5</span></div>
+      <div class="label">Regional offices across India</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <div class="section-head reveal">
+        <div class="eyebrow">About</div>
+        <h2 class="title">An engineer by training.<br />A delivery leader by record.</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card spot about reveal">
+          <p>
+            Since <strong>September 2018</strong>, Sarim Khan has led the <strong>Project Department</strong> of
+            FocusOn Interior Decorators Pvt. Ltd. — directing end-to-end delivery of turnkey commercial interior
+            fit-outs across corporate, IT, BFSI, education, healthcare and F&amp;B verticals.
+          </p>
+          <p>
+            From BOQ finalisation and design coordination through site execution, billing and formal handover, he
+            keeps multi-site, multi-crore programmes on schedule, on budget and to the company's
+            <strong>C.Q.E.T.</strong> standard — supporting the organisation's growth from ₹40 Cr to a projected ₹100 Cr.
+          </p>
+
+          <h3 class="sub-h">Technical Toolkit</h3>
+          <div class="tools">
+            <span class="tool"><i class="fa-solid fa-ruler-combined"></i> AutoCAD</span>
+            <span class="tool"><i class="fa-solid fa-diagram-project"></i> Primavera</span>
+            <span class="tool"><i class="fa-solid fa-chart-gantt"></i> StandPro</span>
+          </div>
+        </div>
+
+        <div class="card spot edu reveal" style="--d:.1s">
+          <span class="edu-year">2012 — 2016</span>
+          <h3>Bachelor of Technology (B.Tech), Civil Engineering</h3>
+          <p>Structures, materials, estimation and construction management — applied daily to fit-out delivery.</p>
+          <div class="badge-row">
+            <span class="pill">Estimation</span>
+            <span class="pill">Construction Mgmt</span>
+            <span class="pill">Site Execution</span>
+            <span class="pill">Billing &amp; Handover</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= C.Q.E.T. ================= -->
+    <section id="cqet" class="cqet">
+      <div class="section-head reveal">
+        <div class="eyebrow">How I Work</div>
+        <h2 class="title">The C.Q.E.T. Operating Standard</h2>
+        <p>Four non-negotiables that govern every engagement — the framework behind FocusOn's delivery organisation.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card spot reveal"><div class="letter">C</div><h3>Consistency</h3><p>Repeatable, disciplined execution across every site — the same standard in every city.</p></div>
+        <div class="card spot reveal" style="--d:.08s"><div class="letter">Q</div><h3>Quality</h3><p>Uncompromising standards in design and workmanship, verified room by room.</p></div>
+        <div class="card spot reveal" style="--d:.16s"><div class="letter">E</div><h3>Economical</h3><p>Cost-efficient solutions without cutting corners — value engineered, never cheapened.</p></div>
+        <div class="card spot reveal" style="--d:.24s"><div class="letter">T</div><h3>Time Efficiency</h3><p>On time, every time — without compromising quality.</p></div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="svc">
+      <div class="section-head reveal">
+        <div class="eyebrow">Services</div>
+        <h2 class="title">Design, build &amp; turnkey solutions</h2>
+        <p>One roof, one vision, one team — from structural intervention to the final styling touch.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card spot reveal">
+          <span class="idx">01</span>
+          <div class="svc-ico"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h3>Design-Build &amp; General Contracting</h3>
+          <p>Design vision and structural execution integrated into cohesive spaces, foundation to finish.</p>
+        </div>
+        <div class="card spot reveal" style="--d:.08s">
+          <span class="idx">02</span>
+          <div class="svc-ico"><i class="fa-solid fa-couch"></i></div>
+          <h3>Interior Fit-Outs &amp; Contracts</h3>
+          <p>Full-scale interiors for corporate, hospitality, retail and residential spaces — furniture, lighting, joinery and finishes.</p>
+        </div>
+        <div class="card spot reveal" style="--d:.16s">
+          <span class="idx">03</span>
+          <div class="svc-ico"><i class="fa-solid fa-paint-roller"></i></div>
+          <h3>Remodeling &amp; Refurbishment</h3>
+          <p>Refreshed layouts, materials and finishes that stay in harmony with the existing architecture.</p>
+        </div>
+        <div class="card spot reveal">
+          <span class="idx">04</span>
+          <div class="svc-ico"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>Project Management &amp; Oversight</h3>
+          <p>Procurement, quality control, scheduling, site supervision and post-handover service under one team.</p>
+        </div>
+        <div class="card spot reveal" style="--d:.08s">
+          <span class="idx">05</span>
+          <div class="svc-ico"><i class="fa-solid fa-helmet-safety"></i></div>
+          <h3>Construction Works</h3>
+          <p>Structural changes and build-outs executed with precision, integrating aesthetics and function.</p>
+        </div>
+        <div class="card spot reveal" style="--d:.16s">
+          <span class="idx">06</span>
+          <div class="svc-ico"><i class="fa-solid fa-file-invoice"></i></div>
+          <h3>Turnkey BOQ-to-Handover</h3>
+          <p>BOQ finalisation, design coordination, site execution, billing and formal handover, delivered as one workflow.</p>
+        </div>
+      </div>
+
+      <div class="sectors reveal" aria-label="Industries served">
+        <span class="sector">Corporate Offices</span>
+        <span class="sector">IT &amp; Technology</span>
+        <span class="sector">BFSI &amp; NBFCs</span>
+        <span class="sector">Healthcare &amp; Diagnostics</span>
+        <span class="sector">Education</span>
+        <span class="sector">F&amp;B / QSR</span>
+        <span class="sector">Retail Brands</span>
+        <span class="sector">Logistics</span>
+        <span class="sector">Industrial Spaces</span>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="proj">
+      <div class="section-head reveal">
+        <div class="eyebrow">Selected Work</div>
+        <h2 class="title">Featured engagements</h2>
+        <p>Multi-site, multi-crore programmes directed from BOQ to handover.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card spot reveal">
+          <div class="proj-top">
+            <span class="sector-tag">BFSI</span>
+            <h3>Max Life Insurance</h3>
+            <div class="loc">PAN India</div>
+          </div>
+          <div class="proj-body">
+            <div><div class="k">Area</div><div class="v">50,000 sq. ft.</div></div>
+            <div style="text-align:right"><div class="k">Value</div><div class="v or">₹30.00 Cr</div></div>
+          </div>
+        </article>
+
+        <article class="card spot reveal" style="--d:.08s">
+          <div class="proj-top">
+            <span class="sector-tag">BFSI</span>
+            <h3>L&amp;T Financial Services</h3>
+            <div class="loc">Chandigarh · Navi Mumbai · Gurgaon · Bengaluru · Hyderabad</div>
+          </div>
+          <div class="proj-body">
+            <div><div class="k">Area</div><div class="v">96,500 sq. ft.</div></div>
+            <div style="text-align:right"><div class="k">Value</div><div class="v or">₹24.15 Cr</div></div>
+          </div>
+        </article>
+
+        <article class="card spot reveal" style="--d:.16s">
+          <div class="proj-top">
+            <span class="sector-tag">F&amp;B</span>
+            <h3>Compass Group</h3>
+            <div class="loc">Mumbai · Pune · Chennai</div>
+          </div>
+          <div class="proj-body">
+            <div><div class="k">Area</div><div class="v">87,000 sq. ft.</div></div>
+            <div style="text-align:right"><div class="k">Value</div><div class="v or">₹18.30 Cr</div></div>
+          </div>
+        </article>
+
+        <article class="card spot reveal">
+          <div class="proj-top">
+            <span class="sector-tag">Healthcare</span>
+            <h3>Krsnaa Diagnostics</h3>
+            <div class="loc">Maharashtra · West Bengal + PAN India</div>
+          </div>
+          <div class="proj-body">
+            <div><div class="k">Area</div><div class="v">35,000 sq. ft.</div></div>
+            <div style="text-align:right"><div class="k">Value</div><div class="v or">₹10.50 Cr</div></div>
+          </div>
+        </article>
+
+        <article class="card spot reveal" style="--d:.08s">
+          <div class="proj-top">
+            <span class="sector-tag">Corporate Campus</span>
+            <h3>Luminous Power Technologies</h3>
+            <div class="loc">Haridwar, Uttarakhand</div>
+          </div>
+          <div class="proj-body">
+            <div><div class="k">Area</div><div class="v">45,000 sq. ft.</div></div>
+            <div style="text-align:right"><div class="k">Delivery</div><div class="v or">Turnkey</div></div>
+          </div>
+        </article>
+
+        <article class="card spot reveal" style="--d:.16s">
+          <div class="proj-top">
+            <span class="sector-tag">IT &amp; Corporate</span>
+            <h3>Marquee Accounts</h3>
+            <div class="loc">Infosys · HCLTech · Wipro · Accenture · Google · HSBC</div>
+          </div>
+          <div class="proj-body">
+            <div><div class="k">Portfolio</div><div class="v">Full Client Roster</div></div>
+            <div style="text-align:right"><a class="btn btn-primary" style="padding:9px 14px;font-size:.85rem" href="https://sarim-khan-portfolio.vercel.app/clients" target="_blank" rel="noopener">View <i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CLIENTS ================= -->
+    <section id="clients">
+      <div class="section-head reveal">
+        <div class="eyebrow">Marquee Accounts</div>
+        <h2 class="title">Trusted by India's most demanding workplaces</h2>
+      </div>
+      <div class="marquee reveal" aria-label="Client list">
+        <div class="marquee-track" id="track1"></div>
+      </div>
+      <div class="marquee marquee-rev reveal" style="margin-top:14px" aria-hidden="true">
+        <div class="marquee-track" id="track2"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <div class="section-head reveal">
+        <div class="eyebrow">Get in Touch</div>
+        <h2 class="title">Let's discuss your next fit-out.</h2>
+        <p>For project consultations, partnerships and delivery leadership conversations.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-tile reveal" href="tel:+919005554240">
+          <span class="ico"><i class="fa-solid fa-phone"></i></span>
+          <div style="min-width:0"><small>Mobile</small><span class="val">+91 90055 54240</span></div>
+        </a>
+        <a class="contact-tile reveal" style="--d:.06s" href="https://wa.me/919005554240" target="_blank" rel="noopener">
+          <span class="ico wa"><i class="fa-brands fa-whatsapp"></i></span>
+          <div style="min-width:0"><small>WhatsApp</small><span class="val">Chat on WhatsApp</span></div>
+        </a>
+        <a class="contact-tile reveal" style="--d:.12s" href="mailto:sarim.sam786@gmail.com">
+          <span class="ico or"><i class="fa-solid fa-envelope"></i></span>
+          <div style="min-width:0"><small>Email</small><span class="val">sarim.sam786@gmail.com</span></div>
+        </a>
+        <a class="contact-tile reveal" href="https://www.linkedin.com/in/sarim-khan-485a90304/" target="_blank" rel="noopener">
+          <span class="ico"><i class="fa-brands fa-linkedin-in"></i></span>
+          <div style="min-width:0"><small>LinkedIn</small><span class="val">linkedin.com/in/sarim-khan-485a90304</span></div>
+        </a>
+        <a class="contact-tile reveal" style="--d:.06s" href="https://sarim-khan-portfolio.vercel.app/" target="_blank" rel="noopener">
+          <span class="ico"><i class="fa-solid fa-briefcase"></i></span>
+          <div style="min-width:0"><small>Portfolio</small><span class="val">sarim-khan-portfolio.vercel.app</span></div>
+        </a>
+        <a class="contact-tile reveal" style="--d:.12s" href="https://focusoninteriors.com/" target="_blank" rel="noopener">
+          <span class="ico or"><i class="fa-solid fa-globe"></i></span>
+          <div style="min-width:0"><small>Company</small><span class="val">focusoninteriors.com</span></div>
+        </a>
+        <a class="contact-tile reveal" href="tel:01149287589">
+          <span class="ico"><i class="fa-solid fa-building-columns"></i></span>
+          <div style="min-width:0"><small>Office Landline</small><span class="val">+91 011 4928 7589</span></div>
+        </a>
+        <a class="contact-tile reveal" style="--d:.06s" href="mailto:info@focusoninterior.in">
+          <span class="ico"><i class="fa-solid fa-inbox"></i></span>
+          <div style="min-width:0"><small>Company Email</small><span class="val">info@focusoninterior.in</span></div>
+        </a>
+        <a class="contact-tile reveal" style="--d:.12s" href="https://wa.me/919910258820" target="_blank" rel="noopener">
+          <span class="ico wa"><i class="fa-brands fa-whatsapp"></i></span>
+          <div style="min-width:0"><small>Office WhatsApp</small><span class="val">+91 99 1025 8820</span></div>
+        </a>
+      </div>
+
+      <div class="grid-2" style="margin-top:20px; align-items: stretch;">
+        <div class="card spot address-card reveal">
+          <span class="ico"><i class="fa-solid fa-location-dot"></i></span>
+          <div>
+            <h3>Head Office</h3>
+            <p>UN-150, Near Shiv Mandir, Sikanderpur, Gurugram, Haryana 122002</p>
+            <p style="margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=UN-150+Near+Shiv+Mandir+Sikanderpur+Gurugram+122002" target="_blank" rel="noopener">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.8em"></i></a></p>
+            <div class="offices" aria-label="Regional offices">
+              <span class="office"><i class="fa-solid fa-city"></i> Delhi NCR</span>
+              <span class="office"><i class="fa-solid fa-city"></i> Bengaluru</span>
+              <span class="office"><i class="fa-solid fa-city"></i> Pune</span>
+              <span class="office"><i class="fa-solid fa-city"></i> Chennai</span>
+              <span class="office"><i class="fa-solid fa-city"></i> Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card spot qr-card reveal" style="--d:.1s">
+          <div class="qr-box" id="qr" role="img" aria-label="QR code to save Sarim Khan's contact">
+            <i class="fa-solid fa-qrcode" style="font-size:3rem;color:#ccc"></i>
+          </div>
+          <h3>Scan to save contact</h3>
+          <p>Point your phone camera at the code to add Sarim Khan directly to your contacts.</p>
+          <button class="btn btn-primary" type="button" data-action="save"><i class="fa-solid fa-address-book"></i> Save as .vcf</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section>
+      <div class="cta reveal">
+        <h2>Ready to style your next space?</h2>
+        <p>Share your brief — from a single floor to a multi-city rollout. One point of contact, one workflow, one delivered vision.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+919005554240"><i class="fa-solid fa-phone"></i> Call Sarim</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/919005554240" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a class="btn btn-ghost" href="https://focusoninteriors.com/contact/" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane"></i> Start a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wordmark">
+      <span class="mark"><i class="fa-solid fa-couch"></i></span>
+      <span>FocusOn <span style="color:var(--orange-2)">Interiors</span><small>INTERIORS</small></span>
+    </div>
+    <p>FocusOn Interior Decorators Pvt. Ltd. · Turnkey interior fit-outs across India.</p>
+    <nav class="foot-links" aria-label="Company links">
+      <a href="https://focusoninteriors.com/about/" target="_blank" rel="noopener">About</a>
+      <a href="https://focusoninteriors.com/projects/" target="_blank" rel="noopener">Projects</a>
+      <a href="https://focusoninteriors.com/services/" target="_blank" rel="noopener">Services</a>
+      <a href="https://focusoninteriors.com/career/" target="_blank" rel="noopener">Careers</a>
+      <a href="https://focusoninteriors.com/contact/" target="_blank" rel="noopener">Contact</a>
+    </nav>
+    <p style="margin-top:22px;font-size:.8rem;opacity:.75">© 2026 FocusOn Interiors · Spaces Styled, Stories Told · <a href="#top" style="color:#fff">Back to top ↑</a></p>
+  </footer>
+
+  <!-- floating action dock -->
+  <nav class="dock" aria-label="Quick actions">
+    <a href="tel:+919005554240" aria-label="Call Sarim Khan"><i class="fa-solid fa-phone"></i>Call</a>
+    <a class="wa" href="https://wa.me/919005554240" target="_blank" rel="noopener" aria-label="WhatsApp Sarim Khan"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+    <a href="mailto:sarim.sam786@gmail.com" aria-label="Email Sarim Khan"><i class="fa-solid fa-envelope"></i>Email</a>
+    <button type="button" data-action="save" aria-label="Save contact"><i class="fa-solid fa-address-book"></i>Save</button>
+    <button type="button" data-action="share" aria-label="Share visiting card"><i class="fa-solid fa-share-nodes"></i>Share</button>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/qrcode.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const CONTACT = {
+        name: "Sarim Khan",
+        title: "Project Director",
+        org: "FocusOn Interiors",
+        mobile: "+919005554240",
+        email: "sarim.sam786@gmail.com",
+        linkedin: "https://www.linkedin.com/in/sarim-khan-485a90304/",
+        portfolio: "https://sarim-khan-portfolio.vercel.app/",
+        website: "https://focusoninteriors.com/",
+        photo: "assets/sarim-khan.jpg"
+      };
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const $ = (s, c = document) => c.querySelector(s);
+      const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+
+      /* ---------- toast ---------- */
+      let toastTimer;
+      function toast(msg, icon = "fa-circle-check") {
+        const t = $("#toast");
+        t.innerHTML = `<i class="fa-solid ${icon}"></i><span></span>`;
+        t.querySelector("span").textContent = msg;
+        t.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => t.classList.remove("show"), 2400);
+      }
+
+      /* ---------- clients marquee ---------- */
+      const clients = [
+        "Infosys", "HCLTech", "Wipro", "Accenture", "Nokia", "Google", "KPMG", "Oracle", "BT Group",
+        "L&T Financial Services", "HSBC", "Max Life Insurance", "Sodexo", "Compass Group", "McDonald's",
+        "Burger King", "Zomato", "Flipkart", "Avaya", "Panasonic", "Voltas", "Bajaj Allianz",
+        "Krsnaa Diagnostics", "Tata 1mg", "Titan", "Emversity", "Luminous Power", "Ericsson"
+      ];
+      const half = Math.ceil(clients.length / 2);
+      const renderTrack = (el, list) => {
+        // duplicate so the CSS translateX(-50%) loop is seamless
+        const html = [...list, ...list].map(n =>
+          `<span class="client"><i class="fa-solid fa-building"></i>${n}</span>`).join("");
+        el.innerHTML = html;
+      };
+      renderTrack($("#track1"), clients.slice(0, half));
+      renderTrack($("#track2"), clients.slice(half));
+
+      /* ---------- scroll reveal ---------- */
+      const revealEls = $$(".reveal");
+      if ("IntersectionObserver" in window && !reduceMotion) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              e.target.querySelectorAll(".count").forEach(runCount);
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+        revealEls.forEach(el => io.observe(el));
+      } else {
+        revealEls.forEach(el => el.classList.add("in"));
+      }
+
+      /* ---------- count-up ---------- */
+      function runCount(el) {
+        if (el.dataset.done) return;
+        el.dataset.done = "1";
+        const target = Number(el.dataset.target);
+        const locale = el.dataset.locale || "en-IN";
+        if (reduceMotion) { el.textContent = target.toLocaleString(locale); return; }
+        const dur = 1600, start = performance.now();
+        const step = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased).toLocaleString(locale);
+          if (p < 1) requestAnimationFrame(step);
+        };
+        el.textContent = "0";
+        requestAnimationFrame(step);
+      }
+
+      /* ---------- scroll progress ---------- */
+      const progress = $("#progress");
+      const onScroll = () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = `scaleX(${h > 0 ? window.scrollY / h : 0})`;
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- 3D tilt on portrait (desktop pointers only) ---------- */
+      const tilt = $("#tilt");
+      if (tilt && !reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        tilt.addEventListener("pointermove", (e) => {
+          const r = tilt.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          tilt.style.transform = `perspective(900px) rotateY(${(x * 12).toFixed(2)}deg) rotateX(${(-y * 12).toFixed(2)}deg)`;
+        });
+        tilt.addEventListener("pointerleave", () => { tilt.style.transform = ""; });
+      }
+
+      /* ---------- cursor spotlight on cards ---------- */
+      document.addEventListener("pointermove", (e) => {
+        const card = e.target.closest && e.target.closest(".spot");
+        if (!card) return;
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        card.style.setProperty("--my", `${e.clientY - r.top}px`);
+      }, { passive: true });
+
+
+      /* ---------- vCard (3.0) builder ---------- */
+      const esc = (s) => String(s).replace(/\\/g, "\\\\").replace(/\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;");
+
+      function fold(line) {
+        // RFC 2426: fold lines longer than 75 octets; continuation lines start with a space
+        const out = [];
+        while (line.length > 75) { out.push(line.slice(0, 75)); line = " " + line.slice(75); }
+        out.push(line);
+        return out.join("\r\n");
+      }
+
+      function buildVCard(photoB64) {
+        const lines = [
+          "BEGIN:VCARD",
+          "VERSION:3.0",
+          "N:Khan;Sarim;;;",
+          "FN:Sarim Khan",
+          "ORG:FocusOn Interiors;Project Department",
+          "TITLE:Project Director",
+          "ROLE:Project Director",
+          "TEL;TYPE=CELL,VOICE,PREF:+919005554240",
+          "TEL;TYPE=WORK,VOICE:+911149287589",
+          "TEL;TYPE=WORK,VOICE:+919910258820",
+          "EMAIL;TYPE=INTERNET,PREF:sarim.sam786@gmail.com",
+          "EMAIL;TYPE=WORK:info@focusoninterior.in",
+          "URL;TYPE=WORK:https://focusoninteriors.com/",
+          "URL;TYPE=HOME:https://sarim-khan-portfolio.vercel.app/",
+          "X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/sarim-khan-485a90304/",
+          "ADR;TYPE=WORK:;;UN-150 Near Shiv Mandir\\, Sikanderpur;Gurugram;Haryana;122002;India",
+          "CATEGORIES:Interior Design,Project Management",
+          "NOTE:" + esc("Project Director, FocusOn Interiors. Turnkey commercial interior fit-outs across India. Spaces Styled, Stories Told."),
+        ];
+        if (photoB64) lines.push("PHOTO;ENCODING=b;TYPE=JPEG:" + photoB64);
+        lines.push("REV:" + new Date().toISOString(), "END:VCARD");
+        return lines.map(fold).join("\r\n") + "\r\n";
+      }
+
+      // Photo is embedded in the downloadable .vcf so the photo shows up in phone contacts.
+      const photoPromise = fetch(CONTACT.photo)
+        .then(r => (r.ok ? r.arrayBuffer() : null))
+        .then(buf => {
+          if (!buf) return null;
+          const bytes = new Uint8Array(buf);
+          let bin = "";
+          for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+          return btoa(bin);
+        })
+        .catch(() => null);
+
+      async function saveContact() {
+        const photo = await photoPromise;
+        const blob = new Blob([buildVCard(photo)], { type: "text/vcard;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Sarim-Khan-FocusOn-Interiors.vcf";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+        toast("Contact card downloaded — open it to save", "fa-address-book");
+      }
+
+      /* ---------- share ---------- */
+      async function shareCard() {
+        const url = location.href.split("#")[0];
+        const data = {
+          title: "Sarim Khan – Project Director, FocusOn Interiors",
+          text: "Connect with Sarim Khan, Project Director at FocusOn Interiors.",
+          url
+        };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch { /* user cancelled */ }
+        } else {
+          try { await navigator.clipboard.writeText(url); toast("Card link copied to clipboard", "fa-link"); }
+          catch { toast("Share not supported on this browser", "fa-triangle-exclamation"); }
+        }
+      }
+
+      $$("[data-action='save']").forEach(b => b.addEventListener("click", saveContact));
+      $$("[data-action='share']").forEach(b => b.addEventListener("click", shareCard));
+
+      /* ---------- QR code (contact vCard, no photo so it stays small) ---------- */
+      try {
+        if (window.qrcode) {
+          const qr = window.qrcode(0, "M");
+          qr.addData(buildVCard(null));
+          qr.make();
+          $("#qr").innerHTML = qr.createSvgTag(4, 0, "QR code to save Sarim Khan's contact");
+        }
+      } catch (err) {
+        console.warn("QR generation failed", err);
+        $("#qr").innerHTML = '<span style="color:#5d6573;font-size:.85rem">Use "Save as .vcf" below</span>';
+      }
+
+      /* ---------- portrait fallback if image is missing ---------- */
+      const img = $(".portrait img");
+      img.addEventListener("error", () => {
+        img.alt = "";
+        img.parentElement.style.background = "linear-gradient(135deg,#ff6b1a,#0f1115)";
+        img.style.display = "none";
+      });
+    })();
+  </script>
+</body>
+</html>
